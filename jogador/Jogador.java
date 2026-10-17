@@ -1,6 +1,9 @@
 package jogador;
 
+import jogo.*;
+
 public interface Jogador
 {
-    // faça
+    Marca getMarca      ();
+    void  facaSuaJogada ();
 }
