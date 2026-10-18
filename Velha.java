@@ -1,4 +1,5 @@
 import jogador.*;
+import jogo.*;
 import jogo.Marca;
 import jogo.Tabuleiro;
 
@@ -55,13 +56,13 @@ public class Velha
                 }
                 while (!analista.fimDeJogo());
 
-                if (analista.getMarcaDoVencedor().equals(jogadorH.getMarca()))
+                if (jogadorH.getMarca().equals(analista.getMarcaDoVencedor()))
                     jogadorH.vcGanhou ();
                 else
-                    if (analista.getMarcaDoVencedor().equals(jogadorA.getMarca()))
-                        jogadorH.vcPerdeu ();
-                    else
-                        jogadorH.deuVelha ();
+                if (jogadorA.getMarca().equals(analista.getMarcaDoVencedor()))
+                    jogadorH.vcPerdeu ();
+                else
+                    jogadorH.deuVelha ();
 
                 jogadorHumanoComeca = !jogadorHumanoComeca;
             }
