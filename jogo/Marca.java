@@ -9,7 +9,10 @@ public class Marca
         if (smb != 'X' && smb != 'O') throw new Exception("Simbolo incorreto");
 
         simbolo = smb;
-
+        // validar smb, garantindo que ele
+        // seja 'X' ou 'O' e coloca-lo em
+        // simbolo
+        // dar excecao em caso de valor invalido
     }
 
     public char getSimbolo ()
